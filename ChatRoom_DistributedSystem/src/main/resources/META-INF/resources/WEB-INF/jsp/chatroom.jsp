@@ -27,7 +27,7 @@
 <div id="chat-page" class="hidden">
     <div class="chat-container">
         <div class="chat-header">
-            <h2>Spring WebSocket Chat Demo</h2>
+            <h2>CloudBond Chat Room</h2>
         </div>
         <div class="connecting">
             Connecting...
@@ -44,7 +44,6 @@
             </div>
         </form>
     </div>
-    <button onclick="test()">click</button>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>

@@ -12,6 +12,6 @@ public class indexController {
 
     @GetMapping // Map ONLY GET Requests
     public String index(){
-        return "login";
+        return "redirect:/login";
     }
 }
