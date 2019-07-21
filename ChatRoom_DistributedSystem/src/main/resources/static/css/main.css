@@ -1,35 +1,6 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 html,body {
     height: 100%;
     overflow: hidden;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1.58;
-    color: #333;
-    background-color: #f4f4f4;
-    height: 100%;
-}
-
-body:before {
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #128ff2;
-    content: "";
-    z-index: 0;
 }
 
 .clearfix:after {
@@ -56,11 +27,6 @@ body:before {
 input {
     padding-left: 10px;
     outline: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 h1 {
@@ -98,19 +64,13 @@ button.primary {
     color: #fff;
 }
 
-button.accent {
-    background-color: #ff4743;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
-}
-
 #username-page {
     text-align: center;
 }
 
 .username-page-container {
-    background: #fff;
-    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.5);
+    border: 2px #FFF solid;
     border-radius: 2px;
     width: 100%;
     max-width: 500px;
@@ -139,21 +99,22 @@ button.accent {
 }
 
 .chat-container {
-    max-width: 700px;
+    background: #2a2f4a !important;
+    max-width: 50vw;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
-    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
-    margin-top: 30px;
-    height: calc(100% - 60px);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+    border:2px antiquewhite solid;
+    height: 75vh;
     max-height: 600px;
     position: relative;
 }
 
 #chat-page ul {
     list-style-type: none;
-    background-color: #FFF;
     margin: 0;
+    margin-left: 0.5em !important;
+    margin-right: 1em !important;
     overflow: auto;
     overflow-y: scroll;
     padding: 0 20px 0px 20px;
@@ -168,7 +129,7 @@ button.accent {
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid rgba(180,180,180,0.3);
 }
 
 #chat-page ul li p {
@@ -176,13 +137,12 @@ button.accent {
 }
 
 #chat-page .event-message {
-    width: 100%;
     text-align: center;
     clear: both;
 }
 
 #chat-page .event-message p {
-    color: #777;
+    color: rgba(225, 120, 83, 0.91);
     font-size: 14px;
     word-wrap: break-word;
 }
@@ -210,37 +170,45 @@ button.accent {
 }
 
 #chat-page .chat-message span {
-    color: #333;
+    color: #f9f9f9;
     font-weight: 600;
 }
 
 #chat-page .chat-message p {
-    color: #43464b;
+    color: #fefefe;
 }
 
 #messageForm .input-group input {
     float: left;
-    width: calc(100% - 85px);
+    max-width: 80%;
+    border: 2px white solid;
+    margin-right: 2.5vh;
 }
 
 #messageForm .input-group button {
     float: left;
-    width: 80px;
-    height: 38px;
-    margin-left: 5px;
 }
 
 .chat-header {
     text-align: center;
     padding: 15px;
-    border-bottom: 1px solid #ececec;
 }
 
 .chat-header h2 {
     margin: 0;
-    font-weight: 500;
+    font-size: 1.5em !important;
 }
 
+.chat-header h2:after{
+    content: '';
+    background-color: #fefefe;
+    display: block;
+    height: 3px;
+    margin-top: 0.5em !important;
+    margin-bottom: -0.6em !important;
+    margin: 0 auto;
+    width: 60%;
+}
 .connecting {
     padding-top: 5px;
     text-align: center;
@@ -273,7 +241,13 @@ button.accent {
     }
 
     #chat-page ul {
-        height: calc(100% - 120px);
+        list-style-type: none;
+        margin: 0;
+        background: #2a2f4a !important;
+        overflow: auto;
+        overflow-y: scroll;
+        padding: 0 20px 0px 20px;
+        height: calc(100% - 150px);
     }
 
     #messageForm .input-group button {
@@ -293,6 +267,96 @@ button.accent {
     }
 
     .chat-header h2 {
-        font-size: 1.1em;
+        font-size: 1.5em !important;
     }
+
+    .chat-header h2:after{
+        content: '';
+        background-color: #fefefe;
+        display: block;
+        height: 3px;
+        margin-top: 0.5em !important;
+        margin-bottom: -0.6em !important;
+        margin: 0 auto;
+        width: 60%;
+    }
+}
+
+.style-2::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: inherit;
+}
+
+.style-2::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: inherit;
+}
+
+.style-2::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgba(108, 191, 205, 0.81);
+}
+
+.title{
+    padding-top:1em;
+}
+
+.bgA{
+    position: absolute;
+    top: 11%;
+    left: 0;
+    width: 100vw;
+    height: 55vh;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.bgABlur{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#252a44,#2a2f4adb, #ffffff38,#ffffff00,#ffffff38,#2a2f4adb,#252a44);
 }

@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Server Interface</title>
+    <title>CloudBond - Server Interface</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/generic2.css" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
@@ -70,6 +70,7 @@
 
     <div class="logRight2">
         <h1>User List</h1>
+
         <table id="uList">
             <%
         List<User> userList = (List<User>)request.getAttribute("userList");
@@ -78,11 +79,14 @@
             String username = currentUser.getUserName();
             %>
             <form method="post" action="/admin/deleteUser" >
-                <tr>
-                    <td><%=username%><input name="userName" value="<%=username%>" style="display:none"></td>
+                <tr style="height:10vh">
+                    <td>
+                        <div style="width: 22vw; font-weight: bold; font-size: 1.5em; padding-left: 1em;" >
+                            <%=username%><input name="userName" value="<%=username%>" style="display:none">
+                        </div>
+                    </td>
                     <td><button type="submit">Delete</button></td>
                 </tr>
-                <br>
             </form>
             <%
         }
