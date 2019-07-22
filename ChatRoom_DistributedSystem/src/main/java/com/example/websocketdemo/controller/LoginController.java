@@ -29,7 +29,7 @@ public class LoginController {
         String localAddr2 = "0:0:0:0:0:0:0:1";
         System.out.println(clientAddr);
         if (clientAddr.equals(localAddr1)|| clientAddr.equals(localAddr2)){
-//            return new ModelAndView("redirect:/admin");
+            return new ModelAndView("redirect:/admin");
         }
         return modelAndView;
     }

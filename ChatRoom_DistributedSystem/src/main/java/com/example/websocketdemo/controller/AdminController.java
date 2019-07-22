@@ -33,7 +33,7 @@ public class AdminController {
             List<User> userList = userRepository.findAll();
             modelAndView.addObject("userList", userList);
         } else {
-//            return new ModelAndView("redirect:/login");
+            return new ModelAndView("redirect:/login");
         }
         return modelAndView;
     }
