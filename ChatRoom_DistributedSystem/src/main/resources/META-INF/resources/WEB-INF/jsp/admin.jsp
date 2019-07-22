@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>CloudBond - Server Interface</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/generic2.css" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
 </head>
@@ -71,7 +72,7 @@
     <div class="logRight2">
         <h1>User List</h1>
 
-        <table id="uList">
+        <table id="uList" class="style-2">
             <%
         List<User> userList = (List<User>)request.getAttribute("userList");
                 System.out.println("UserList: " +userList.toString());
